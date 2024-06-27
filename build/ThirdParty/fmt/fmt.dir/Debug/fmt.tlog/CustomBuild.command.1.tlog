@@ -1,0 +1,10 @@
+^C:\DEV\CPP\GRAF\VULKAN\VULKAN-GUIDE-2\THIRDPARTY\FMT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/dev/cpp/graf/vulkan/vulkan-guide-2 -BC:/dev/cpp/graf/vulkan/vulkan-guide-2/build --check-stamp-file C:/dev/cpp/graf/vulkan/vulkan-guide-2/build/ThirdParty/fmt/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

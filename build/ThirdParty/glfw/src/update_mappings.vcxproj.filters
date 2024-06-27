@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\CMakeFiles\48bc25aab261a9a776c35ef55039619b\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\ThirdParty\glfw\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{04D3D023-4EEF-39C9-B628-CF0759A9390E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{85FD9AC9-9423-353D-9647-3FA358198717}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

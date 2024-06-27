@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\CMakeFiles\1b72024656e7a3dd3d4660830a38d468\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{04D3D023-4EEF-39C9-B628-CF0759A9390E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\shared\CMakeFiles\vkguide_shared.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_initializers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_images.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_descriptors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_pipelines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\meshes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_initializers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_descriptors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\vk_pipelines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\meshes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\shared\CMakeFiles\vkguide_shared.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\shared\CMakeFiles\vkguide_shared.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\shared\CMakeFiles\vkguide_shared.dir\MinSizeRel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\build\shared\CMakeFiles\vkguide_shared.dir\RelWithDebInfo\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\dev\cpp\graf\vulkan\vulkan-guide-2\shared\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{85FD9AC9-9423-353D-9647-3FA358198717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{9D31C892-5F09-3122-BD68-D228B0967E82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{39FA4538-BA85-3CFF-8912-6FA2A3715333}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
