@@ -7,7 +7,7 @@ include_directories(AFTER ${Vulkan_INCLUDE_DIRS})
 #includes
 include_directories(ThirdParty/glm)
 include_directories(ThirdParty/glfw)
-#include_directories(ThirdParty/stb)
+include_directories(ThirdParty/stb)
 include_directories(ThirdParty/VulkanMemoryAllocator/include)
 add_subdirectory(ThirdParty)
 

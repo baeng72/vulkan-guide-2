@@ -140,7 +140,7 @@ struct Node : IRenderable{
 
 #define VK_CHECK(x)                                         \
     do {                                                    \
-        VkResult res = x;                                   \
+        VkResult err = x;                                   \
         if(err) {                                           \
             fmt::print("Detected Vulkan error: {}", string_VkResult(err));\
             abort();                                        \

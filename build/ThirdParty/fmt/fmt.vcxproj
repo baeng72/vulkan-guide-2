@@ -78,7 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -100,10 +100,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -116,7 +116,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -139,10 +139,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -155,7 +155,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -178,10 +178,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -194,7 +194,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -216,10 +216,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.243.0\Include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glm;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\glfw;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\stb;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\VulkanMemoryAllocator\include;C:\dev\cpp\graf\vulkan\vulkan-guide-2\ThirdParty\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
