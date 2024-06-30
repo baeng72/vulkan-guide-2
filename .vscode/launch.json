@@ -8,10 +8,10 @@
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/chapter_1/Debug/chapter_1.exe",
+            "program": "${workspaceFolder}/build/chapter_2/Debug/chapter_2.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/chapter_1",
+            "cwd": "${workspaceFolder}/chapter_2",
             "environment": [],
             "console": "integratedTerminal"
         },

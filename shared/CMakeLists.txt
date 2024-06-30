@@ -13,6 +13,8 @@ add_library (vkguide_shared STATIC
   camera.h
   meshes.h
   meshes.cpp
+  FileUtils.h
+  FileUtils.cpp
 )
 
 set_property(TARGET vkguide_shared PROPERTY CXX_STANDARD 20)

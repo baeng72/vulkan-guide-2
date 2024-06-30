@@ -44,7 +44,7 @@ struct AllocatedImage{
     VkImageView imageView{VK_NULL_HANDLE};
     VmaAllocation allocation{VK_NULL_HANDLE};
     VmaAllocationInfo allocationInfo{};//might be useful?
-    VkExtent2D imageExtent{};
+    VkExtent3D imageExtent{};
     VkFormat imageFormat{VK_FORMAT_UNDEFINED};
 };
 

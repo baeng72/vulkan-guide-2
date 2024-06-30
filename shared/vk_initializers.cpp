@@ -91,11 +91,49 @@ namespace vkinit{
         return depth_attachment_info;
     }
 
+    VkRenderingInfo rendering_info(VkExtent2D renderExtent, VkRenderingAttachmentInfo* colorAttachment, VkRenderingAttachmentInfo* depthAttachment){
+        VkRenderingInfo renderInfo{VK_STRUCTURE_TYPE_RENDERING_INFO};
+        renderInfo.renderArea = VkRect2D({VkOffset2D{0, 0}, renderExtent});
+        renderInfo.layerCount = 1;
+        renderInfo.colorAttachmentCount = 1;
+        renderInfo.pColorAttachments = colorAttachment;
+        renderInfo.pDepthAttachment = depthAttachment;
+        return renderInfo;
+    }
+
     VkImageSubresourceRange image_subresource_range(VkImageAspectFlags aspectMask){
         VkImageSubresourceRange subImage{};
         subImage.aspectMask = aspectMask;
         subImage.levelCount = VK_REMAINING_MIP_LEVELS;
         subImage.layerCount = VK_REMAINING_ARRAY_LAYERS;
         return subImage;
+    }
+
+    VkImageCreateInfo image_create_info(VkFormat format, VkImageUsageFlags usageFlags, VkExtent3D extent){
+        VkImageCreateInfo info{VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO};
+        info.imageType = VK_IMAGE_TYPE_2D;
+        info.format = format;
+        info.extent = extent;
+        info.mipLevels = 1;
+        info.arrayLayers = 1;
+
+        //for MSAA, we will not be using it by default, so default it to 1 sampler per pixel.
+        info.samples = VK_SAMPLE_COUNT_1_BIT;
+
+        //optimal tiling, which means the image is stored on the best gpu format
+        info.tiling = VK_IMAGE_TILING_OPTIMAL;
+        info.usage = usageFlags; 
+
+        return info;
+    }
+
+    VkImageViewCreateInfo imageview_create_info(VkFormat format, VkImage image, VkImageAspectFlags aspectFlags){
+        //build a image-view for the depth image to use for rendering
+        VkImageViewCreateInfo info{VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO};
+        info.viewType = VK_IMAGE_VIEW_TYPE_2D;
+        info.image = image;
+        info.format = format;
+        info.subresourceRange = {aspectFlags, 0,1,0,1};
+        return info;
     }
 }
