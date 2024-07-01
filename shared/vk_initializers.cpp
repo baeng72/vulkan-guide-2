@@ -136,4 +136,21 @@ namespace vkinit{
         info.subresourceRange = {aspectFlags, 0,1,0,1};
         return info;
     }
+
+    VkPipelineLayoutCreateInfo pipeline_layout_create_info(){
+        VkPipelineLayoutCreateInfo info{VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO};
+        //empty default
+        return info;
+    }
+
+    VkPipelineShaderStageCreateInfo pipeline_shader_stage_create_info(VkShaderStageFlagBits stage, VkShaderModule shaderModule, ccharp entry){
+        VkPipelineShaderStageCreateInfo info{VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO};
+        //shader stage
+        info.stage = stage;
+        //module containing the code for this shader stage
+        info.module = shaderModule;
+        //the entry point of the shader
+        info.pName = entry;
+        return info;
+    }
 }

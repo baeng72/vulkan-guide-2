@@ -4,7 +4,7 @@ cmake_policy(VERSION 3.6)
 
 
 #fmt
-add_subdirectory(fmt)
+add_subdirectory(fmt EXCLUDE_FROM_ALL)
 
 #glm
 add_library(glm INTERFACE)
@@ -52,6 +52,10 @@ endif()
 
 #fast gltf
 add_subdirectory(fastgltf)
+
+#tinygltf
+
+add_subdirectory(tinygltf)
 
 
 

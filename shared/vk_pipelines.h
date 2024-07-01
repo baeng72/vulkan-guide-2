@@ -5,3 +5,35 @@ namespace vkutil{
     bool load_shader_module(ccharp filePath, VkDevice device, VkShaderModule* outShaderModule);
     bool compile_shader_module(ccharp filePath, VkDevice device,VkShaderStageFlagBits stage, VkShaderModule* outShaderModule);
 }
+
+class PipelineBuilder{
+        public:
+        std::vector<VkPipelineShaderStageCreateInfo> _shaderStages;
+        VkPipelineInputAssemblyStateCreateInfo _inputAssembly;
+        VkPipelineRasterizationStateCreateInfo _rasterizer;
+        VkPipelineColorBlendAttachmentState _colorBlendAttachment;
+        VkPipelineMultisampleStateCreateInfo _multisampling;
+        VkPipelineLayout _pipelineLayout{VK_NULL_HANDLE};
+        VkPipelineDepthStencilStateCreateInfo _depthStencil;
+        VkPipelineRenderingCreateInfo _renderInfo;
+        VkFormat _colorAttachmentFormat{VK_FORMAT_UNDEFINED};
+
+        PipelineBuilder() { clear(); }
+
+        void clear();
+        void set_shaders(VkShaderModule vertexShader, VkShaderModule fragmentShader);
+        void set_input_topology(VkPrimitiveTopology topology);
+        void set_polygon_mode(VkPolygonMode mode);
+        void set_cull_mode(VkCullModeFlags cullMode, VkFrontFace frontFace);
+        void set_multisampling_none();
+        void disable_blending();
+        void enable_blending_additive();
+        void enable_blending_alphablend();
+        void set_color_attachment_format(VkFormat format);
+        void set_depth_format(VkFormat format);
+        void disable_depthtest();
+        void enable_depthtest(bool depthWriteEnable, VkCompareOp op);
+        
+
+        VkPipeline build_pipeline(VkDevice device);
+    };

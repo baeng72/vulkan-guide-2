@@ -26,6 +26,8 @@ include_directories(ThirdParty/stb)
 include_directories(ThirdParty/VulkanMemoryAllocator/include)
 include_directories(ThirdParty/imgui)
 include_directories(ThirdParty/imgui/backends)
+include_directories(ThirdParty/fastgltf/include)
+include_directories(ThirdParty/tinygltf)
 add_subdirectory(ThirdParty)
 
 #shared lib
@@ -35,3 +37,4 @@ add_subdirectory(shared)
 add_subdirectory(chapter_0)
 add_subdirectory(chapter_1)
 add_subdirectory(chapter_2)
+add_subdirectory(chapter_3)

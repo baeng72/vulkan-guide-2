@@ -28,3 +28,6 @@
 [submodule "glslang"]
 	path = ThirdParty/glslang
 	url = https://github.com/KhronosGroup/glslang.git
+[submodule "tinygltf"]
+	path = ThirdParty/tinygltf
+	url = https://github.com/syoyo/tinygltf.git
