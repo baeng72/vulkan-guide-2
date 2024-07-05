@@ -66,11 +66,12 @@ static_assert(sizeof(GPUGLTFMaterial) == 256);
 struct GPUSceneData{
     mat4 view;
     mat4 proj;
-    mat4 viewProj;
-    vec4 ambientColor;
-    vec4 sunlightDirection;//(x,y,z) = dir, w = sun power
-    vec4 sunlightColor;
+    mat4 viewproj;
+   vec4 ambientColor;
+   vec4 sunlightDirection;//w for sun power
+   vec4 sunlightColor;
 };
+
 
 //material types
 enum class MaterialPass : u8{
@@ -82,6 +83,13 @@ enum class MaterialPass : u8{
 struct MaterialPipeline{
     VkPipeline pipeline{VK_NULL_HANDLE};
     VkPipelineLayout layout{VK_NULL_HANDLE};
+};
+
+struct MaterialInstance{
+    MaterialPipeline* pipeline;
+    VkDescriptorSet materialSet;
+    MaterialPass passType;
+
 };
 
 //vbuf types

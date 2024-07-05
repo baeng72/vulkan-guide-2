@@ -30,7 +30,8 @@ struct FrameData{
     VkFence _renderFence{VK_NULL_HANDLE};
     VkCommandPool _commandPool{VK_NULL_HANDLE};
     VkCommandBuffer _mainCommandBuffer{VK_NULL_HANDLE};
-    DeletionQueue _deletionQueue;    
+    DeletionQueue _deletionQueue;   
+    DescriptorAllocatorGrowable _frameDescriptors; 
 };
 
 struct ComputePushConstants{
@@ -40,12 +41,63 @@ struct ComputePushConstants{
     vec4 data4;
 };
 
+
+
 struct ComputeEffect{
     ccharp name{nullptr};
     VkPipeline pipeline{VK_NULL_HANDLE};
     VkPipelineLayout layout{VK_NULL_HANDLE};
     ComputePushConstants data;
 };
+
+struct RenderObject{
+    u32 indexCount;
+    u32 firstIndex;
+    VkBuffer indexBuffer;
+    MaterialInstance * material;
+    mat4 transform;
+    VkDeviceAddress vertexBufferAddress;
+};
+
+struct GLTFMetallic_Roughness{
+    MaterialPipeline opaquePipeline;
+    MaterialPipeline transparentPipeline;
+    VkDescriptorSetLayout materialLayout;
+
+    struct MaterialConstants{
+        vec4 colorFactor;
+        vec4 metalRoughnessFactor;
+        //padding, we need it anyway for uniforms
+        vec4 extra[14];
+    };
+
+    struct MaterialResources{
+        AllocatedImage colorImage;
+        VkSampler colorSampler;
+        AllocatedImage metalRoughImage;
+        VkSampler metalRoughSampler;
+        VkBuffer dataBuffer;
+        u32 dataBufferOffset;
+    };
+
+    DescriptorWriter writer;
+
+    void build_pipelines(VulkanEngine*engine);
+    void clear_resources(VkDevice device);
+    MaterialInstance write_material(VkDevice device, MaterialPass pass, const MaterialResources&resources, DescriptorAllocatorGrowable& DescriptorAllocator);
+};
+
+
+struct DrawContext{
+    std::vector<RenderObject> OpaqueSurfaces;
+};
+
+
+struct MeshNode : public Node{
+    std::shared_ptr<MeshAsset> mesh;
+    virtual void Draw(const mat4 & topMatrix, DrawContext& ctx)override;
+};
+
 
 constexpr unsigned int FRAME_OVERLAP = 2;//max frames?
 
@@ -63,14 +115,17 @@ class VulkanEngine{
     void init_descriptors();
     void init_pipelines();
     void init_background_pipelines();
-    VkShaderModule get_shader(ccharp shaderSrcPath, VkShaderStageFlagBits stage);
+    
     void init_imgui();
     void draw_imgui(VkCommandBuffer cmd, VkImageView targetImageView);
     void init_triangle_pipeline();
     void draw_geometry(VkCommandBuffer cmd);
     AllocatedBuffer create_buffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memoryUsage);
     void destroy_buffer(const AllocatedBuffer& buffer);
-    
+    AllocatedImage create_image(VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipmapped=false);
+    AllocatedImage create_image(void* data, VkExtent3D size, VkFormat format, VkImageUsageFlags usage, bool mipmapped=false);
+    void destroy_image(const AllocatedImage& img);
+
     void init_mesh_pipeline();
     void init_default_data();
     public:
@@ -117,10 +172,21 @@ class VulkanEngine{
     VkExtent2D _drawExtent;
     float renderScale = 1.f;
 
-    DescriptorAllocator globalDescriptorAllocator;
+    //default images
+    AllocatedImage _whiteImage;
+    AllocatedImage _blackImage;
+    AllocatedImage _greyImage;
+    AllocatedImage _errorCheckerboardImage;
+
+    VkSampler _defaultSamplerLinear;
+    VkSampler _defaultSamplerNearest;
+
+    DescriptorAllocatorGrowable globalDescriptorAllocator;
 
     VkDescriptorSet _drawImageDescriptors;
     VkDescriptorSetLayout _drawImageDescriptorLayout;
+
+    VkDescriptorSetLayout _singleImageDescriptorLayout;
 
     VkPipeline _gradientPipeline;
     VkPipelineLayout _gradientPipelineLayout;
@@ -133,7 +199,8 @@ class VulkanEngine{
 
     GPUMeshBuffers rectangle;
 
-
+    GPUSceneData sceneData;
+    VkDescriptorSetLayout _gpuSceneDataDescriptorLayout;
 
     //immediate submit structures
     VkFence _immFence;
@@ -144,6 +211,14 @@ class VulkanEngine{
     i32 currentBackgroundEffect{0};
 
     std::vector<std::shared_ptr<MeshAsset>> testMeshes;
+
+    MaterialInstance defaultData;
+    GLTFMetallic_Roughness metalRoughMaterial;
+
+    DrawContext mainDrawContext;
+    std::unordered_map<std::string, std::shared_ptr<Node>> loadedNodes;
+
+    void update_scene();
 
     void immediate_submit(std::function<void(VkCommandBuffer cmd)>&&function);
     GPUMeshBuffers uploadMesh(std::span<u32> indices, std::span<Vertex> vertices);
@@ -157,5 +232,7 @@ class VulkanEngine{
     void draw();
 
     void run();
+
+    VkShaderModule get_shader(ccharp shaderSrcPath, VkShaderStageFlagBits stage);
     
 };
